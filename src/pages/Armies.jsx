@@ -46,7 +46,7 @@ import baModel6 from '../assets/Spacemarines/Blood_angels/Mephiston.png';
 
 import daLogo from '../assets/Spacemarines/Dark_angels/Dark_angels.png';
 import daBg from '../assets/Spacemarines/Dark_angels/Dark_Angels_DA.jpg';
-import daModel1 from "../assets/Spacemarines/Dark_angels/Lion_El'Jonson.png"; 
+import daModel1 from '../assets/Spacemarines/Dark_angels/Lion_El_Jonson.png'; 
 import daModel2 from '../assets/Spacemarines/Dark_angels/Dark_Angels_Priest.png';
 import daModel3 from '../assets/Spacemarines/Dark_angels/Dark_Angels1.png';
 import daModel4 from '../assets/Spacemarines/Dark_angels/Dark_Angels2.png';
