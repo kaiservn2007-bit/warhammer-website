@@ -1,12 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../App.css';
 
-// --- IMPORT VIDEO ---
-import video1 from '../assets/Videos/Warhammer 40,000 The New Edition Cinematic Trailer - Warhammer (1080p, h264).mp4';
-import video2 from '../assets/Videos/What is Warhammer 40,000 - Warhammer (1080p, h264).mp4';
-import video3 from '../assets/Videos/The Armouring of a Space Marine Cinematic  Warhammer 40,000 - Warhammer (1080p, h264).mp4';
-import video4 from '../assets/Videos/Armageddon Warhammer 40,000 New Edition Cinematic Trailer - Warhammer (1080p, h264).mp4'; 
-
 // --- IMPORT LOGO & THUMBNAILS ---
 import thumb1 from '../assets/Videos/cinematic.jpg';  
 import thumb2 from '../assets/Videos/whatiswarhammer40.jpg'; 
@@ -16,10 +10,10 @@ import servitor1Img from '../assets/adeptus mecha 1.png';
 import servitor2Img from '../assets/adeptus mecha 2.png';
 
 export default function Home() {
-  const slides = [
-    { id: 0, title: "WHAT IS WARHAMMER 40,000", videoSrc: video1, thumbImg: thumb1 }, 
-    { id: 1, title: "THE ARMOURING OF A SPACE MARINE", videoSrc: video2, thumbImg: thumb2 }, 
-    { id: 2, title: "THE NEW EDITION CINEMATIC TRAILER", videoSrc: video3, thumbImg: thumb3 } 
+ const slides = [
+    { id: 0, title: "WHAT IS WARHAMMER 40,000", videoSrc: '/Videos new/video1.mp4', thumbImg: thumb1 }, 
+    { id: 1, title: "THE ARMOURING OF A SPACE MARINE", videoSrc: '/Videos new/video2.mp4', thumbImg: thumb2 }, 
+    { id: 2, title: "THE NEW EDITION CINEMATIC TRAILER", videoSrc: '/Videos new/video3.mp4', thumbImg: thumb3 } 
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -85,11 +79,11 @@ export default function Home() {
       </section>
 
       <section className="new-edition-section">
-        <video className="new-edition-bg" src={video4} autoPlay muted loop playsInline />
+        <video className="new-edition-bg" src={'/Videos/video4.mp4'} autoPlay muted loop playsInline />
         <div className="new-edition-overlay"></div>
         <div className="new-edition-content">
           <h2>ARMAGEDDON: WARHAMMER<br/>40,000 NEW EDITION<br/>CINEMATIC TRAILER</h2>
-          <button className="watch-video-btn" onClick={() => openVideoModal(video4)}>
+          <button className="watch-video-btn" onClick={() => openVideoModal('/Videos new/video4.mp4')}>
             <span className="play-icon-small">▶</span> WATCH VIDEO
           </button>
         </div>
