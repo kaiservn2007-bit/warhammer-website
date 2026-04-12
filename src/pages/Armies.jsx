@@ -118,7 +118,7 @@ import csmModel3 from '../assets/Chaos/Chaos_Space_Marines/Chaos_Marine2.png';
 import csmModel4 from '../assets/Chaos/Chaos_Space_Marines/Chaos_Priest.png';
 import csmModel5 from '../assets/Chaos/Chaos_Space_Marines/Chaos_Sisters.png';
 
-import dgLogo from '../assets/Chaos/Death_Guards/Death_guard_logo.png';
+import dgLogo from '../assets/Chaos/Death_Guards/Death_Guard_logo.png';
 import dgBg from '../assets/Chaos/Death_Guards/Death_Guard_DG.jpg';
 import dgModel1 from '../assets/Chaos/Death_Guards/Death_marine1.png';
 import dgModel2 from '../assets/Chaos/Death_Guards/Death_marine2.png';
