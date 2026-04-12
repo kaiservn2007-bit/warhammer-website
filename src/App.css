@@ -436,7 +436,9 @@ html, body { width: 100%; height: 100%; background-color: #111111; overflow-x: h
   .detail-title { font-size: 2rem; }
   .detail-nav-btns { justify-content: center; }
   .floating-model { max-height: 350px; margin-bottom: 30px; }
-  .model-arrow-btn { display: none; }
+  .model-arrow-btn { display: flex !important; width: 35px; height: 35px; font-size: 14px; } 
+  .left-arrow { left: 10px; } 
+  .right-arrow { right: 10px; }
   .sub-factions-nav-wrapper { position: relative; background: #000; padding: 20px; }
   .sub-factions-nav { flex-wrap: wrap; gap: 20px; justify-content: center; }
   .sub-faction-item { width: 30%; }
