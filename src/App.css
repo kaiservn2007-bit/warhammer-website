@@ -2,7 +2,13 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 #root { max-width: 100% !important; margin: 0 !important; padding: 0 !important; text-align: left !important; width: 100%; }
-html, body { width: 100%; height: 100%; background-color: #111111; overflow-x: hidden; }
+html, body { 
+  width: 100%; 
+  min-height: 100vh; 
+  background-color: #111111; 
+  overflow-x: hidden; 
+  scroll-behavior: smooth; /* Bonus: Thêm dòng này để khi bấm link trang web sẽ cuộn cực mượt */
+}
 .warhammer-layout { color: #ffffff; min-height: 100vh; width: 100%; }
 
 /* ==========================================
