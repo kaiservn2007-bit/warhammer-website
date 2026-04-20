@@ -74,10 +74,20 @@ function App() {
               <button className={`menu-btn ${activeMenu === 'visit' ? 'active' : ''}`} onClick={() => toggleMenu('visit')}>
                 Visit Us <span className="arrow">{activeMenu === 'visit' ? '∧' : '∨'}</span>
               </button>
+              <div className={`mobile-sub-menu ${activeMenu === 'visit' ? 'open' : ''}`}>
+                 <img src={storesImg} alt="Our Warhammer Stores" />
+                 <img src={finderImg} alt="Store Finder" />
+                 <img src={worldImg} alt="Warhammer World" />
+              </div>
               <span className="separator hidden-mobile">|</span>
               <button className={`menu-btn ${activeMenu === 'shop' ? 'active' : ''}`} onClick={() => toggleMenu('shop')}>
                 Shop Online <span className="arrow">{activeMenu === 'shop' ? '∧' : '∨'}</span>
               </button>
+              <div className={`mobile-sub-menu ${activeMenu === 'shop' ? 'open' : ''}`}>
+                 <span className="com-text-mobile">WARHAMMER.COM</span>
+                 <img src={libraryImg} alt="Black Library" />
+                 <img src={merchImg} alt="Merchandise" />
+              </div>
               <span className="separator hidden-mobile">|</span>
               <a href="#plus">Warhammer+</a>
             </nav>
