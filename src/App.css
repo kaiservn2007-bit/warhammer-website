@@ -463,8 +463,18 @@ html, body { width: 100%; height: 100%; background-color: #111111; overflow-x: h
   .footer-social { order: unset; gap: 10px; }
   .footer-social-box { width: 35px; height: 35px; } 
   .footer-center { order: 2; padding: 0; width: 100%; }
-  .footer-links { flex-direction: column; align-items: flex-start; gap: 15px; }
-  .footer-links .divider { display: none; }
+  .footer-links { 
+    flex-direction: row !important; /* Xếp nằm ngang */
+    justify-content: center;       /* Căn giữa */
+    flex-wrap: wrap;               /* Tự động xuống dòng nếu quá dài */
+    gap: 10px;                     /* Khoảng cách giữa chữ và dấu gạch */
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .footer-links .divider { 
+    display: inline !important;    /* Hiện lại dấu gạch dọc | */
+    color: #666;                   /* Màu xám nhẹ cho dấu gạch giống web gốc */
+  }
   .mobile-bottom-pill.hidden-desktop { display: flex !important; justify-content: center; margin-top: 40px; width: 100%; }
   .mobile-bottom-pill a { background-color: #ffffff; color: #000000; padding: 12px 40px; border-radius: 25px; text-decoration: none; font-weight: 800; font-size: 14px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
