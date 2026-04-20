@@ -209,42 +209,51 @@ html, body {
   width: 100%; 
   height: 80vh; 
   display: flex !important;
-  align-items: flex-end !important;   /* Đưa nội dung xuống đáy */
-  justify-content: flex-start !important; /* Đưa nội dung sang trái */
+  align-items: flex-end !important;   
+  justify-content: flex-start !important; 
   text-align: left !important;
-  /* Các lệnh này ép ảnh không lặp và phủ kín khung */
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-color: transparent !important;
+  filter: none !important; /* Lệnh Vàng: Xóa bỏ mọi hiệu ứng làm tối ảnh */
 }
 
-/* Sử dụng ĐÚNG TÊN CLASS TRONG FILE CỦA BẠN: .armies-hero-content */
+/* TIÊU DIỆT MỌI LỚP PHỦ GIẢ TRONG CSS */
+.armies-hero::before,
+.armies-hero::after,
+.hero-overlay {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+}
+
 .armies-hero-content {
   position: relative;
-  z-index: 10 !important;
-  padding: 0 0 60px 60px !important; /* Căn lề trái và đáy giống web gốc */
+  z-index: 999 !important; /* Đẩy chữ lên lớp trên cùng, bất khả xâm phạm */
+  padding: 0 0 60px 60px !important; 
   max-width: 800px !important;
 }
 
-/* Chữ ARMIES: Trắng, gọn gàng, có bóng mờ */
+/* CHỮ ARMIES: Trắng tinh, sắc nét, không bị xám */
 .armies-hero-content h1 { 
   font-family: 'Cinzel', serif !important; 
-  font-size: 50px !important; /* Kích thước nhỏ gọn giống ảnh 2 */
+  font-size: 50px !important; 
   font-weight: 900 !important; 
-  color: #ffffff !important; 
+  color: #ffffff !important; /* Ép trắng 100% */
   text-transform: uppercase !important; 
   margin-bottom: 10px !important; 
   line-height: 1 !important;
   letter-spacing: 2px !important;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.8) !important; /* Bóng đổ nhẹ */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8) !important; 
+  opacity: 1 !important; /* Ép không được làm mờ */
 }
 
-/* Đoạn văn: Trắng, dễ nhìn */
+/* ĐOẠN VĂN: Trắng, dễ nhìn */
 .armies-hero-content p { 
   font-size: 16px !important; 
-  color: #ffffff !important;
-  opacity: 1 !important; 
+  color: #ffffff !important; 
+  opacity: 1 !important; /* Ép không được làm mờ */
   max-width: 600px !important;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.8) !important;
   line-height: 1.5 !important;
