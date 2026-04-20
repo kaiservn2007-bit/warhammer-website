@@ -500,8 +500,16 @@ html, body {
   .navbar a, .menu-btn { padding: 15px !important; width: 100%; text-align: center; border-bottom: 1px solid #333 !important; justify-content: center !important;}
 
   /* SUB-HEADER MOBILE */
-  .sub-header { padding: 0 15px !important; justify-content: center !important;}
-  .sub-header-inner { max-width: 100%; padding: 0 20px !important; margin: 10px 0;}
+  .sub-header { padding: 0 !important; justify-content: center !important; margin: 0 !important;}
+  .sub-header-inner { 
+    max-width: 100%; 
+    padding: 0 20px !important; 
+    margin: 0 !important;
+    border-radius: 0 !important; /* Xóa bo góc để thành thanh ngang phẳng */
+    border-left: none !important;
+    border-right: none !important;
+    background-color: #000000 !important; /* Đổi sang màu đen tuyền giống bản gốc */
+  }
   .mobile-sub-icon { display: block !important; }
   .sub-logo-40k { margin: 0 auto !important; border-right: none; padding-right: 0;}
   .sub-nav { display: none !important; flex-direction: column !important; position: absolute; top: 150px; left: 0; width: 100%; background-color: rgba(10,10,10,0.95); padding: 20px 0 !important; z-index: 100; }
@@ -526,9 +534,17 @@ html, body {
   .info-card { height: auto !important; min-height: 400px; border-radius: 10px !important; width: 100% !important; display: flex; flex-direction: column; justify-content: flex-end; }
 
   /* ARMIES PAGE MOBILE */
-  .armies-hero { height: 60vh; }
+  .armies-hero { 
+    height: 60vh !important; 
+    margin-top: 0 !important; /* Ma thuật ở đây: Xóa lực kéo âm từ desktop để ảnh nằm ngay dưới sub-header */
+    padding-top: 0 !important; 
+  }
   .armies-hero-content { padding: 0 20px 40px 20px !important; }
-  .armies-hero-content h1 { font-size: 2.8rem; line-height: 1; letter-spacing: 0; }
+  .armies-hero-content h1 { 
+    font-size: 2.2rem !important; /* Thu nhỏ chữ lại để chữ MILLENNIUM vừa khít màn hình */
+    line-height: 1.1 !important; 
+    letter-spacing: 1px !important; 
+  }
   .factions-nav { flex-wrap: nowrap !important; justify-content: flex-start !important; overflow-x: auto !important; gap: 15px !important; padding-bottom: 2px !important; -ms-overflow-style: none; scrollbar-width: none; scroll-snap-type: x mandatory; }
   .factions-nav::-webkit-scrollbar { display: none; }
   .faction-item { flex: 0 0 50% !important; width: auto !important; scroll-snap-align: center; border-bottom: 2px solid transparent; padding-bottom: 15px;}
