@@ -646,7 +646,16 @@ export default function Armies() {
 
   return (
     <main className="main-content">
-      <section className="armies-hero" style={{ backgroundImage: `url('${armiesBgImg}')` }}>
+      {/* HERO SECTION - ĐÃ SỬA LỖI LẶP ẢNH TẠI ĐÂY */}
+      <section 
+        className="armies-hero" 
+        style={{ 
+          backgroundImage: `url('${armiesBgImg}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="armies-hero-overlay"></div>
         <div className="armies-hero-content">
           <h1>THE ARMIES OF THE<br/>41ST MILLENNIUM</h1>
