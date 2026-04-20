@@ -209,41 +209,43 @@ html, body {
   width: 100%; 
   height: 80vh; 
   display: flex;
-  align-items: flex-end; 
-  justify-content: flex-start; 
-  text-align: left; 
-  color: #fff;
+  align-items: flex-end; /* Ép toàn bộ nội dung xuống góc dưới */
+  justify-content: flex-start; /* Ép toàn bộ nội dung sang trái */
+  text-align: left;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-size: cover !important; 
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed; 
+  background-color: transparent !important; /* Đảm bảo không có màu nền nào pha vào ảnh */
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 0 0 60px 60px; 
+  padding: 0 0 80px 60px; /* Canh lề: cách đáy 80px, cách mép trái 60px */
+  max-width: 1000px; /* Mở rộng khung để chứa được chữ khổng lồ */
+}
+
+/* CHỮ "ARMIES" SIÊU TO, IN HOA, TRẮNG VÀ ĐẬM */
+.hero-content h1 { 
+  font-family: 'Cinzel', serif; 
+  font-size: clamp(60px, 8vw, 130px) !important; /* Kích thước siêu to (lên tới 130px) nhưng vẫn co giãn mượt trên điện thoại */
+  font-weight: 900 !important; /* In đậm tối đa */
+  text-transform: uppercase !important; /* Ép buộc in hoa toàn bộ */
+  color: #ffffff !important; /* Màu trắng tinh 100% */
+  margin-bottom: 5px; 
+  letter-spacing: 4px;
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.9); /* Bóng đen phía sau chữ giúp chữ nổi bật bần bật trên mọi nền ảnh */
+  line-height: 1;
+}
+
+/* ĐOẠN VĂN MÔ TẢ BÊN DƯỚI */
+.hero-content p { 
+  font-size: 18px; 
+  line-height: 1.6; 
+  color: #ffffff !important;
+  opacity: 1 !important; /* Cấm làm mờ chữ */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
   max-width: 700px;
-}
-
-.hero-content h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 55px; 
-  font-weight: 900;
-  margin-bottom: 10px;
-  color: #ffffff !important;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.hero-content p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #ffffff !important;
-  opacity: 1;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 .factions-section { background-color: #000000; padding: 60px 20px 40px 20px; text-align: center; }
