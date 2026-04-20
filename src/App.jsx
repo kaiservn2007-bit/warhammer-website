@@ -170,16 +170,16 @@ function App() {
             
             <nav className={`sub-nav ${isMobileSubNavOpen ? 'mobile-open' : ''}`}>
               <NavLink to="/starting" className={({ isActive }) => isActive ? "active-link" : ""}>
-                STARTING<br className="hidden-mobile"/>WARHAMMER 40,000
+                STARTING <br className="hidden-mobile"/>WARHAMMER 40,000
               </NavLink>
               <NavLink to="/discover" className={({ isActive }) => isActive ? "active-link" : ""}>
-                DISCOVER THE 41ST<br className="hidden-mobile"/>MILLENNIUM
+                DISCOVER THE 41ST <br className="hidden-mobile"/>MILLENNIUM
               </NavLink>
               <NavLink to="/armies" className={({ isActive }) => isActive ? "active-link" : ""}>
-                THE<br className="hidden-mobile"/>ARMIES
+                THE <br className="hidden-mobile"/>ARMIES
               </NavLink>
               <NavLink to="/games" className={({ isActive }) => isActive ? "active-link" : ""}>
-                OTHER<br className="hidden-mobile"/>GAMES
+                OTHER <br className="hidden-mobile"/>GAMES
               </NavLink>
             </nav>
           </div>
