@@ -207,50 +207,45 @@ html, body {
 .armies-hero {
   position: relative; 
   width: 100%; 
-  height: 80vh; 
-  display: flex;
-  align-items: flex-end !important; /* Ép nội dung xuống đáy */
-  justify-content: flex-start !important; /* Ép nội dung sang trái */
+  height: 85vh; /* Tăng thêm một chút chiều cao cho thoáng */
+  display: flex !important;
+  align-items: flex-end !important;   /* Đưa nội dung xuống đáy */
+  justify-content: flex-start !important; /* Đưa nội dung sang trái */
   text-align: left !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-color: transparent !important;
+  background-color: transparent !important; /* Loại bỏ mọi màu nền tối */
 }
 
-/* VŨ KHÍ TỐI THƯỢNG: Ép tàng hình mọi màn đen nếu file JSX vẫn còn sót */
-.armies-hero .hero-overlay, 
-.hero-overlay {
-  display: none !important; 
-  opacity: 0 !important;
-  visibility: hidden !important;
+/* Ép tàng hình mọi lớp phủ nếu còn sót lại trong CSS */
+.hero-overlay, .armies-hero .hero-overlay {
+  display: none !important;
+  background: none !important;
 }
 
-.hero-content {
+.armies-hero-content {
   position: relative;
-  z-index: 99 !important; /* Đẩy chữ lên lớp cao nhất */
-  padding: 0 0 50px 50px !important; /* Căn lề trái và đáy 50px */
-  max-width: 1000px !important; 
+  z-index: 10 !important;
+  padding: 0 0 60px 60px !important; /* Cách đáy 60px, cách lề trái 60px */
+  max-width: 1200px !important;
 }
 
-/* CHỮ "ARMIES" KHỔNG LỒ, TRẮNG BÓC */
-.hero-content h1 { 
+/* CHỮ ARMIES: TO, TRẮNG, ĐẬM */
+.armies-hero-content h1 { 
   font-family: 'Cinzel', serif !important; 
-  font-size: clamp(50px, 10vw, 120px) !important; /* Chữ to lên tới 120px trên máy tính */
+  font-size: clamp(60px, 12vw, 150px) !important; /* Siêu to, lên tới 150px trên máy tính */
   font-weight: 900 !important; 
+  color: #ffffff !important; /* Trắng tinh khiết */
   text-transform: uppercase !important; 
-  color: #ffffff !important; /* Trắng 100% */
-  margin-bottom: 5px !important; 
-  line-height: 1 !important;
-  text-shadow: 3px 3px 15px rgba(0,0,0,0.8) !important; /* Đổ bóng đen siêu đậm để chữ nổi bật */
+  margin-bottom: 10px !important; 
+  line-height: 0.9 !important;
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.7) !important; /* Bóng đổ để chữ nổi bật trên nền ảnh */
 }
 
-.hero-content p { 
+.armies-hero-content p { 
   font-size: 18px !important; 
   color: #ffffff !important;
-  opacity: 1 !important; 
-  max-width: 650px !important;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
+  opacity: 1 !important; /* Không để bị mờ hay xám */
+  max-width: 600px !important;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8) !important;
 }
 
 .factions-section { background-color: #000000; padding: 60px 20px 40px 20px; text-align: center; }
