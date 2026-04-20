@@ -222,10 +222,6 @@ html, body {
   background-attachment: fixed; 
 }
 
-.hero-overlay {
-  display: none !important;
-}
-
 .hero-content {
   position: relative;
   z-index: 2;
