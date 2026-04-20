@@ -305,7 +305,38 @@ html, body { width: 100%; height: 100%; background-color: #111111; overflow-x: h
 .info-cards-wrapper { display: flex; gap: 30px; justify-content: space-between; }
 
 /* Kéo dài thẻ lên 650px */
-.info-card-final { flex: 1; position: relative; height: 650px; border-radius: 12px; overflow: hidden; display: flex; align-items: flex-end; text-align: left; transition: transform 0.3s ease; border: 1px solid #333; }
+.info-card-final {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* Chỉnh lại cách hiển thị ảnh nền */
+  background-size: 140% !important; /* Phóng to ảnh lên để tập trung vào chi tiết như web gốc */
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+/* Tinh chỉnh riêng vị trí cho từng thẻ */
+.card-adeptus-mecha {
+  background-position: left center !important; /* Đẩy hình đầu lâu sang trái một chút */
+}
+
+.card-core-rules {
+  background-position: center !important;
+}
+
+/* Làm cho lớp phủ tối hơn để làm nổi bật chữ vàng */
+.card-overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.2) 100%);
+  z-index: 1;
+}
 .info-card-final:hover { transform: translateY(-5px); border-color: #fca311; }
 
 /* Hạ lớp phủ mờ cho sáng ảnh */

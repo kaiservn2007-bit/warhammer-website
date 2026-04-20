@@ -768,31 +768,25 @@ export default function Armies() {
           <h2 className="whats-next-main-title" style={{ textAlign: 'left', marginBottom: '40px', color: '#fff' }}>NEED MORE INFORMATION?</h2>
           
           <div className="info-cards-wrapper">
-            
-            {/* Card 1: Imperium and Forces of Chaos (Dùng ảnh tải lên) */}
-            <div className="info-card-final card-adeptus-mecha" style={{ backgroundImage: `url('${adeptusMechaIcon}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            {/* Card 1: Imperium & Chaos */}
+            <div className="info-card-final card-adeptus-mecha" style={{ backgroundImage: `url('${adeptusMechaIcon}')` }}>
               <div className="card-overlay-dark"></div>
               <div className="info-card-content">
-                <div className="info-faction-icon-placeholder">
-                </div>
-                <h3>EXPLORE THE IMPERIUM AND FORCES OF CHAOS FACTIONS</h3>
+                <h3 style={{ color: '#fca311' }}>EXPLORE THE IMPERIUM AND FORCES OF CHAOS FACTIONS</h3>
                 <p>Unite the Emperor's forces or embrace the dark powers. Discover their stories, units, and rules.</p>
-                <button className="wn-btn yellow-btn">SEE MORE</button>
+                <button className="wn-btn yellow-btn">WATCH NOW</button>
               </div>
             </div>
 
-            {/* Card 2: Xenos Factions (Dùng ảnh tải lên) */}
-            <div className="info-card-final card-core-rules" style={{ backgroundImage: `url('${coreRulesProduct}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            {/* Card 2: Xenos Factions */}
+            <div className="info-card-final card-core-rules" style={{ backgroundImage: `url('${coreRulesProduct}')` }}>
               <div className="card-overlay-dark"></div>
               <div className="info-card-content">
-                <div className="info-faction-icon-placeholder">
-                </div>
                 <h3 style={{ color: '#fff' }}>EXPLORE THE XENOS FACTIONS</h3>
                 <p>Confront alien menaces or unleash your own swarm. Master the unique tactics and powerful units.</p>
-                <button className="wn-btn outline-btn">SEE MORE</button>
+                <button className="wn-btn outline-btn">FIND OUT MORE</button>
               </div>
             </div>
-
           </div>
         </div>
       </section>
