@@ -656,7 +656,7 @@ export default function Armies() {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="armies-hero-overlay"></div>
+        
         <div className="armies-hero-content">
           <h1>THE ARMIES OF THE<br/>41ST MILLENNIUM</h1>
         </div>
