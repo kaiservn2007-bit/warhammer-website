@@ -468,17 +468,34 @@ html, body { width: 100%; height: 100%; background-color: #111111; overflow-x: h
   .mobile-bottom-pill.hidden-desktop { display: flex !important; justify-content: center; margin-top: 40px; width: 100%; }
   .mobile-bottom-pill a { background-color: #ffffff; color: #000000; padding: 12px 40px; border-radius: 25px; text-decoration: none; font-weight: 800; font-size: 14px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-  /* --- SUB-MENU MOBILE (HIỆU ỨNG ACCORDION) --- */
-  .mobile-sub-menu.open {
-    display: flex !important;
+  /* --- SUB-MENU MOBILE (HIỆU ỨNG ACCORDION CÓ ANIMATION) --- */
+  
+  /* Trạng thái mặc định: Chiều cao = 0, bị ẩn đi */
+  .mobile-sub-menu {
+    display: flex !important; /* Ép hiển thị flex để cấu trúc không vỡ */
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    background-color: #222222; /* Màu nền xám đậm như web gốc */
+    background-color: #222222;
     width: 100%;
-    padding: 25px 0 !important;
+    
+    /* Animation nòng cốt nằm ở đây */
+    max-height: 0; 
+    opacity: 0;
+    padding: 0 !important;
+    overflow: hidden; /* Cắt bỏ những phần thừa khi bị thu nhỏ */
+    transition: all 0.4s ease-in-out; /* Thời gian trượt là 0.4 giây */
+    border-bottom: none;
+  }
+
+  /* Trạng thái khi có class 'open' (Khi người dùng bấm nút) */
+  .mobile-sub-menu.open {
+    max-height: 500px; /* Mở rộng chiều cao */
+    opacity: 1; /* Hiện rõ ràng */
+    padding: 25px 0 !important; /* Đẩy khoảng trống ra */
     border-bottom: 1px solid #333;
   }
+
   .mobile-sub-menu img {
     height: 40px;
     object-fit: contain;
