@@ -449,11 +449,23 @@ html, body { width: 100%; height: 100%; background-color: #111111; overflow-x: h
 
   /* WHAT'S NEXT & NEED INFO MOBILE */
   .whats-next-section, .need-info-section { padding: 50px 20px; }
-  .whats-next-cards, .info-cards-wrapper { flex-direction: column; gap: 30px; }
+  .whats-next-cards, .info-cards-wrapper { 
+    flex-direction: row !important; 
+    flex-wrap: nowrap !important; /* Cấm xuống dòng */
+    overflow-x: auto !important;  /* Bật thanh cuộn ngang */
+    gap: 15px !important;
+    padding-bottom: 20px !important; /* Chừa một chút không gian ở dưới cho thanh cuộn */
+    scroll-snap-type: x mandatory;   /* Hiệu ứng nam châm hút thẻ */
+  }
   .whats-next-main-title { font-size: 30px; text-align: center; }
   
   /* Cập nhật chiều cao di động cho các thẻ */
-  .wn-card, .info-card-final { flex: none; width: 100%; height: 550px; padding: 30px; }
+  .wn-card, .info-card-final { 
+    flex: 0 0 85% !important; /* Thẻ chỉ chiếm 85% màn hình để thẻ bên cạnh 'lộ diện' một chút */
+    height: 500px !important; /* Điều chỉnh chiều cao cho vừa vặn */
+    padding: 25px !important;
+    scroll-snap-align: center; /* Hút thẻ nằm chễm chệ ngay giữa màn hình khi vuốt xong */
+  }
   .wn-card-bg-layer-starter-set { background-size: 85%; background-position: right 5px top 15px; }
   .wn-card-content h3, .info-card-content h3 { font-size: 30px; }
   .wn-card-content p, .info-card-content p { font-size: 14px; max-width: 100%; }
