@@ -772,7 +772,11 @@ export default function Armies() {
             <div className="info-card-final card-adeptus-mecha" style={{ backgroundImage: `url('${adeptusMechaIcon}')` }}>
               <div className="card-overlay-dark"></div>
               <div className="info-card-content">
-                <h3 style={{ color: '#fca311' }}>NEED HELP? HEAD TO YOUR NEAREST STORE</h3>
+                {/* Thẻ 1 */}
+                <h3>
+                  <span className="card-prefix-yellow">NEED HELP?</span><br/>
+                  HEAD TO YOUR NEAREST STORE
+                </h3>
                 <p>Our friendly and knowledgeable staff will be able to help you with all of your Warhammer needs, from building and painting your first free miniature, to playing an introductory game, and more.</p>
                 <button className="wn-btn yellow-btn">STORE FINDER</button>
               </div>
@@ -782,7 +786,11 @@ export default function Armies() {
             <div className="info-card-final card-core-rules" style={{ backgroundImage: `url('${coreRulesProduct}')` }}>
               <div className="card-overlay-dark"></div>
               <div className="info-card-content">
-                <h3 style={{ color: '#fff' }}>FREE CORE RULES SIGN UP NOW</h3>
+                {/* Thẻ 2 */}
+                <h3 style={{ color: '#fff' }}>
+                  <span className="card-prefix-yellow">FREE CORE RULES</span><br/>
+                  SIGN UP NOW
+                </h3>
                 <p>Sign up for our newsletters for a special Warhammer 40,000 email featuring the FREE Core Rules, and loads of other benefits to help you start your journey into the grim darkness of the far future.</p>
                 <button className="wn-btn outline-btn">SIGN UP NOW</button>
               </div>

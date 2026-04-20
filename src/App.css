@@ -294,9 +294,15 @@ html, body { width: 100%; height: 100%; background-color: #111111; overflow-x: h
 .wn-btn { padding: 12px 30px; font-size: 14px; font-weight: bold; border-radius: 25px; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; }
 .yellow-btn { background-color: #fca311; color: #000; border: none; }
 .yellow-btn:hover { background-color: #e59400; }
-.outline-btn { background-color: transparent; color: #fff; border: 1px solid #fff; }
-.outline-btn:hover { background-color: #fff; color: #000; }
-
+.outline-btn {
+      border: 2px solid #fca311 !important;
+      color: #fca311 !important; /* Chuyển từ trắng sang vàng giống STORE FINDER */
+      background: transparent;
+    }
+.outline-btn:hover {
+      background: #fca311;
+      color: #000 !important;
+    }
 /* ==========================================
    5. NEED MORE INFORMATION SECTION (TĂNG CHIỀU CAO THẺ)
    ========================================== */
@@ -306,16 +312,19 @@ html, body { width: 100%; height: 100%; background-color: #111111; overflow-x: h
 
 /* Kéo dài thẻ lên 650px */
 .info-card-final {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  /* Chỉnh lại cách hiển thị ảnh nền */
-  background-size: 140% !important; /* Phóng to ảnh lên để tập trung vào chi tiết như web gốc */
-  background-repeat: no-repeat;
-  transition: transform 0.5s ease;
+      height: 650px !important; /* Tăng chiều cao để thẻ trông đứng và thoáng hơn */
+      padding: 40px !important; /* Đẩy nội dung vào trong một chút */
+      justify-content: flex-end !important; /* Ép toàn bộ nội dung xuống đáy thẻ */
+      background-size: cover !important;
+      background-position: center !important;
+}
+.card-prefix-yellow {
+      color: #fca311;
+      font-size: 0.65em; /* Nhỏ hơn tiêu đề chính */
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
 }
 
 /* Tinh chỉnh riêng vị trí cho từng thẻ */
