@@ -216,6 +216,9 @@ html, body {
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-color: transparent !important;
+  margin-top: -135px; 
+  padding-top: 135px; 
+  z-index: 1;         
 }
 
 /* Đảm bảo khung chứa chữ căn lề chuẩn y hệt web gốc */
