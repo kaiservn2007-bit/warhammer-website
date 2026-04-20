@@ -136,7 +136,7 @@ html, body { width: 100%; height: 100%; background-color: #111111; overflow-x: h
 .sub-logo-40k:hover .sub-logo-img { transform: scale(1.05); }
 
 .sub-nav { display: flex !important; align-items: center !important; justify-content: center !important; gap: 60px !important; }
-.sub-nav a { color: #ffffff !important; text-decoration: none !important; font-size: 13px; font-family: 'Arial Black', sans-serif; font-weight: 900; text-align: left; line-height: 1.4; transition: color 0.3s; min-width: max-content !important; letter-spacing: 1px; }
+.sub-nav a { color: #ffffff !important; text-decoration: none !important; font-size: 13px; font-family: 'Arial Black', sans-serif; font-weight: 900; text-align: left; line-height: 1.4; transition: color 0.3s; min-width: max-content !important; letter-spacing: 1px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800; padding: 0 15px;}
 .sub-nav a:hover { color: #fca311 !important; }
 .sub-nav .active-link { color: #fca311 !important; }
 
@@ -402,7 +402,7 @@ html, body { width: 100%; height: 100%; background-color: #111111; overflow-x: h
   .sub-logo-40k { margin: 0 auto !important; border-right: none; padding-right: 0;}
   .sub-nav { display: none !important; flex-direction: column !important; position: absolute; top: 150px; left: 0; width: 100%; background-color: rgba(10,10,10,0.95); padding: 20px 0 !important; z-index: 100; }
   .sub-nav.mobile-open { display: flex !important; }
-  .sub-nav a { text-align: center !important; padding: 10px !important; margin-left: 0; justify-content: center !important;}
+  .sub-nav a { text-align: center !important; padding: 10px !important; margin-left: 0; justify-content: center !important; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800; padding: 0 15px;}
 
   /* HOME PAGE MOBILE */
   .hero-slider { height: 70vh; }
@@ -524,5 +524,35 @@ html, body { width: 100%; height: 100%; background-color: #111111; overflow-x: h
     color: #ffffff;
     font-weight: 900;
     letter-spacing: 2px;
+  }
+  /* --- ANIMATION NÚT HAMBURGER SUB-HEADER --- */
+  .hamburger-icon {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out; /* Thời gian chuyển đổi */
+  }
+
+/* Khi nút ở trạng thái Active (mở menu) */
+  .sub-toggle.active .hamburger-icon span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Thanh trên xoay 45 độ */
+  }
+
+  .sub-toggle.active .hamburger-icon span:nth-child(2) {
+    opacity: 0; /* Thanh giữa biến mất */
+  }
+
+  .sub-toggle.active .hamburger-icon span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Thanh dưới xoay ngược lại */
   }
 }

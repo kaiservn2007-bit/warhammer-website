@@ -160,8 +160,12 @@ function App() {
               <img src={subHeaderLogoImg} alt="Warhammer 40k Logo" className="sub-logo-img" />
             </Link>
             
-            <button className="mobile-toggle-btn sub-toggle hidden-desktop" onClick={() => setIsMobileSubNavOpen(!isMobileSubNavOpen)}>
-              ☰
+            <button className={`mobile-toggle-btn sub-toggle hidden-desktop ${isMobileSubNavOpen ? 'active' : ''}`}  onClick={() => setIsMobileSubNavOpen(!isMobileSubNavOpen)}>
+            <div className="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             </button>
             
             <nav className={`sub-nav ${isMobileSubNavOpen ? 'mobile-open' : ''}`}>
