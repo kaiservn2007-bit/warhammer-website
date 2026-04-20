@@ -219,13 +219,6 @@ html, body {
   background-color: transparent !important;
 }
 
-/* Ép tàng hình cái màn đen (Sử dụng đúng tên class hero-overlay của bạn) */
-.armies-hero .hero-overlay {
-  display: none !important;
-  background: transparent !important;
-  opacity: 0 !important;
-}
-
 /* Sử dụng ĐÚNG TÊN CLASS TRONG FILE CỦA BẠN: .armies-hero-content */
 .armies-hero-content {
   position: relative;
