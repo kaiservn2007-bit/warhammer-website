@@ -209,43 +209,48 @@ html, body {
   width: 100%; 
   height: 80vh; 
   display: flex;
-  align-items: flex-end; /* Ép toàn bộ nội dung xuống góc dưới */
-  justify-content: flex-start; /* Ép toàn bộ nội dung sang trái */
-  text-align: left;
+  align-items: flex-end !important; /* Ép nội dung xuống đáy */
+  justify-content: flex-start !important; /* Ép nội dung sang trái */
+  text-align: left !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-color: transparent !important; /* Đảm bảo không có màu nền nào pha vào ảnh */
+  background-color: transparent !important;
+}
+
+/* VŨ KHÍ TỐI THƯỢNG: Ép tàng hình mọi màn đen nếu file JSX vẫn còn sót */
+.armies-hero .hero-overlay, 
+.hero-overlay {
+  display: none !important; 
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
-  padding: 0 0 80px 60px; /* Canh lề: cách đáy 80px, cách mép trái 60px */
-  max-width: 1000px; /* Mở rộng khung để chứa được chữ khổng lồ */
+  z-index: 99 !important; /* Đẩy chữ lên lớp cao nhất */
+  padding: 0 0 50px 50px !important; /* Căn lề trái và đáy 50px */
+  max-width: 1000px !important; 
 }
 
-/* CHỮ "ARMIES" SIÊU TO, IN HOA, TRẮNG VÀ ĐẬM */
+/* CHỮ "ARMIES" KHỔNG LỒ, TRẮNG BÓC */
 .hero-content h1 { 
-  font-family: 'Cinzel', serif; 
-  font-size: clamp(60px, 8vw, 130px) !important; /* Kích thước siêu to (lên tới 130px) nhưng vẫn co giãn mượt trên điện thoại */
-  font-weight: 900 !important; /* In đậm tối đa */
-  text-transform: uppercase !important; /* Ép buộc in hoa toàn bộ */
-  color: #ffffff !important; /* Màu trắng tinh 100% */
-  margin-bottom: 5px; 
-  letter-spacing: 4px;
-  text-shadow: 4px 4px 10px rgba(0,0,0,0.9); /* Bóng đen phía sau chữ giúp chữ nổi bật bần bật trên mọi nền ảnh */
-  line-height: 1;
+  font-family: 'Cinzel', serif !important; 
+  font-size: clamp(50px, 10vw, 120px) !important; /* Chữ to lên tới 120px trên máy tính */
+  font-weight: 900 !important; 
+  text-transform: uppercase !important; 
+  color: #ffffff !important; /* Trắng 100% */
+  margin-bottom: 5px !important; 
+  line-height: 1 !important;
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.8) !important; /* Đổ bóng đen siêu đậm để chữ nổi bật */
 }
 
-/* ĐOẠN VĂN MÔ TẢ BÊN DƯỚI */
 .hero-content p { 
-  font-size: 18px; 
-  line-height: 1.6; 
+  font-size: 18px !important; 
   color: #ffffff !important;
-  opacity: 1 !important; /* Cấm làm mờ chữ */
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
-  max-width: 700px;
+  opacity: 1 !important; 
+  max-width: 650px !important;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
 }
 
 .factions-section { background-color: #000000; padding: 60px 20px 40px 20px; text-align: center; }
