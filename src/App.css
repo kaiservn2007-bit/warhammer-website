@@ -408,6 +408,14 @@ html, body {
       font-size: 0.65em; 
       text-transform: uppercase;
       display: block;
+      margin-bottom: -5px; 
+      letter-spacing: 1px;
+      text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000,
+         2px 2px 5px rgba(0,0,0,0.8);
       margin-bottom: 8px;
       letter-spacing: 1px;
 }
