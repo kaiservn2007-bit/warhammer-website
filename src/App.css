@@ -373,6 +373,36 @@ html, body {
       overflow: hidden;
       flex: 1;                            /* Chia đều không gian 2 thẻ */
 }
+.info-card-bg-base {
+  position: absolute; inset: 0;
+  background-size: cover; 
+  background-position: center;
+  z-index: 0; /* Lớp nền dưới cùng */
+  transition: transform 0.5s ease;
+}
+
+.info-card-bg-front {
+  position: absolute; inset: 0;
+  background-repeat: no-repeat;
+  z-index: 1; /* Lớp ảnh PNG nằm đè lên trên */
+  transition: transform 0.5s ease;
+}
+
+/* Thẻ 1: Map làm nền ở giữa, Đầu lâu đẩy sang trái */
+.card-adeptus-mecha .info-card-bg-base { background-position: center; }
+.card-adeptus-mecha .info-card-bg-front { background-size: cover; background-position: left center; }
+
+/* Thẻ 2: Khóa chặt ảnh nền hang động và ảnh PNG để chúng co giãn khớp 100% với nhau */
+.card-core-rules .info-card-bg-base,
+.card-core-rules .info-card-bg-front {
+  background-size: cover !important;
+  background-position: center !important; 
+}
+.info-card-final:hover .info-card-bg-base,
+.info-card-final:hover .info-card-bg-front {
+  transform: scale(1.05); 
+}
+
 .card-prefix-yellow {
       color: #fca311;
       font-size: 0.65em; 
@@ -390,7 +420,7 @@ html, body {
 .card-overlay-dark { 
   position: absolute; inset: 0; 
   background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 35%, transparent 70%); 
-  z-index: 1; 
+  z-index: 2; 
 }
 
 /* Căn giữa tuyệt đối toàn bộ nội dung trong thẻ */

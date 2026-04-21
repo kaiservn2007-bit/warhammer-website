@@ -17,6 +17,8 @@ import whatsNext2Bg from '../assets/What_next_2.jpg';
 // Nhớ kiểm tra lại tên file chính xác trong thư mục assets của bạn nhé
 import adeptusMechaIcon from '../assets/adeptus mecha 1.png'; 
 import coreRulesProduct from '../assets/Free_Core_Rules.png'; 
+import imperiumMapBg from '../assets/9th-Imperium-Map.jpg'; 
+import ultraTyranidsBg from '../assets/Ultramarines-vs-Tyranids.jpg';
 
 // === IMPORT SPACE MARINES ===
 import smUltraBg from '../assets/Spacemarines/Ultramarines/Space_Marine_Ultra.jpg'; 
@@ -777,7 +779,9 @@ export default function Armies() {
           
           <div className="info-cards-wrapper">
             {/* Card 1: Imperium & Chaos */}
-            <div className="info-card-final card-adeptus-mecha" style={{ backgroundImage: `url('${adeptusMechaIcon}')` }}>
+            <div className="info-card-final card-adeptus-mecha">
+              <div className="info-card-bg-base" style={{ backgroundImage: `url('${imperiumMapBg}')` }}></div>
+              <div className="info-card-bg-front" style={{ backgroundImage: `url('${adeptusMechaIcon}')` }}></div>
               <div className="card-overlay-dark"></div>
               <div className="info-card-content">
                 {/* Thẻ 1 */}
@@ -791,7 +795,9 @@ export default function Armies() {
             </div>
 
             {/* Card 2: Xenos Factions */}
-            <div className="info-card-final card-core-rules" style={{ backgroundImage: `url('${coreRulesProduct}')` }}>
+            <div className="info-card-final card-core-rules">
+              <div className="info-card-bg-base" style={{ backgroundImage: `url('${ultraTyranidsBg}')` }}></div>
+              <div className="info-card-bg-front" style={{ backgroundImage: `url('${coreRulesProduct}')` }}></div>
               <div className="card-overlay-dark"></div>
               <div className="info-card-content">
                 {/* Thẻ 2 */}
