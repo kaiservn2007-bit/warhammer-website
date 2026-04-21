@@ -75,9 +75,9 @@ function App() {
                 Visit Us <span className="arrow">{activeMenu === 'visit' ? '∧' : '∨'}</span>
               </button>
               <div className={`mobile-sub-menu ${activeMenu === 'visit' ? 'open' : ''}`}>
-                 <img src={storesImg} alt="Our Warhammer Stores" />
-                 <img src={finderImg} alt="Store Finder" />
-                 <img src={worldImg} alt="Warhammer World" />
+                 <img src={storesImg} alt="Our Warhammer Stores" className="visit-menu-img" />
+                 <img src={finderImg} alt="Store Finder" className="visit-menu-img" />
+                 <img src={worldImg} alt="Warhammer World" className="visit-menu-img" />
               </div>
               <span className="separator hidden-mobile">|</span>
               <button className={`menu-btn ${activeMenu === 'shop' ? 'active' : ''}`} onClick={() => toggleMenu('shop')}>
@@ -122,13 +122,13 @@ function App() {
             <div className="mega-menu">
                <div className="mega-menu-content">
                   <div className="menu-item-box">
-                     <img src={storesImg} alt="Our Warhammer Stores" />
+                     <img src={storesImg} alt="Our Warhammer Stores" className="visit-menu-img" />
                   </div>
                   <div className="menu-item-box">
-                     <img src={finderImg} alt="Store Finder" />
+                     <img src={finderImg} alt="Store Finder" className="visit-menu-img" />
                   </div>
                   <div className="menu-item-box">
-                     <img src={worldImg} alt="Warhammer World" />
+                     <img src={worldImg} alt="Warhammer World" className="visit-menu-img" />
                   </div>
                </div>
             </div>

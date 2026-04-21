@@ -115,6 +115,7 @@ html, body {
 .menu-item-box:nth-child(3) { animation-delay: 0.3s; }
 .menu-item-box:hover { opacity: 1 !important; transform: scale(1.05) !important; transition: all 0.3s ease; }
 .menu-item-box img { height: 50px; width: auto; object-fit: contain; }
+.menu-item-box img.visit-menu-img { height: 75px !important; }
 .com-text { font-family: 'Cinzel', serif; font-size: 26px; color: #ffffff; font-weight: 900; letter-spacing: 2px; }
 
 /* --- NÚT HAMBURGER MOBILE --- */
@@ -725,6 +726,9 @@ html, body {
   .mobile-sub-menu img {
     height: 40px;
     object-fit: contain;
+  }
+  .mobile-sub-menu img.visit-menu-img {
+    height: 55px !important; /* Phóng to logo của Visit Us trên màn hình dọc */
   }
   .com-text-mobile {
     font-family: 'Cinzel', serif;
